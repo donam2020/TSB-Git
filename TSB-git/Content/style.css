@@ -250,7 +250,7 @@ footer .header-bottom .nav-menu ul li a {
 #news .introl-left,
 #customer .introl-left,
 #comment .introl-left {
-  transform: translate(10px, 40%);
+  transform: translate(10px, 30%);
 }
 #introl .introl-left .content span,
 #control .introl-left .content span,
@@ -740,6 +740,7 @@ a:focus {
 }
 .category ul {
   list-style: none;
+  margin-top: 30px;
 }
 .category ul li {
   display: flex;

@@ -9,8 +9,8 @@ namespace TSB.Entites
     public class Contact
     {
         public int Id { get; set; }
-        [Display(Name = "Họ và tên"), StringLength(10, ErrorMessage = "Độ dài từ 4 -> 10 kí tự !"),
-       MinLength(4, ErrorMessage = "Độ dài từ 4 -> 10 kí tự !"), Required(ErrorMessage = "Tên không được để trống !")]
+        [Display(Name = "Họ và tên"), StringLength(50, ErrorMessage = "Độ dài từ 4 -> 50 kí tự !"),
+       MinLength(4, ErrorMessage = "Độ dài từ 4 -> 50 kí tự !"), Required(ErrorMessage = "Tên không được để trống !")]
         public string Name { get; set; }
         [Display(Name = " Email"),Required(ErrorMessage ="Email không được để trống !!!")]
         public string Email { get; set; }
