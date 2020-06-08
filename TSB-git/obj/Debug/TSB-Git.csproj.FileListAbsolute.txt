@@ -81,3 +81,5 @@ G:\TSB-Git\TSB-Git\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 G:\TSB-Git\TSB-Git\obj\Debug\TSB-Git.csproj.CopyComplete
 G:\TSB-Git\TSB-Git\obj\Debug\TSB-Git.dll
 G:\TSB-Git\TSB-Git\obj\Debug\TSB-Git.pdb
+G:\TSB-Git\TSB-git\bin\CKFinder.dll
+G:\TSB-Git\TSB-git\bin\CKFinder.pdb

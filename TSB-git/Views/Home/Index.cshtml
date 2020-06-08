@@ -101,7 +101,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-6 introl-left">
-                @foreach (var item in Model.Articles.Where(x => x.Category.TypeShow == TSB.Entites.TyShow.Article).Skip(1).Take(1))
+                @foreach (var item in Model.Articles.Where(x => x.Category.TypeShow == TSB.Entites.TyShow.Category).Take(1))
                 {
                     <div class="title">
                         <span>@item.Title</span>
@@ -127,7 +127,6 @@
                                     </li>
                                 </ul>
                             </div>
-
                     </div>
                 }
 
@@ -148,7 +147,7 @@
 <div id="control">
     <div class="container">
         <ul>
-            @foreach (var item in Model.Articles.Where(x => x.Category.TypeShow == TSB.Entites.TyShow.Category))
+            @foreach (var item in Model.Articles.Where(x => x.Category.TypeShow == TSB.Entites.TyShow.Category).Take(5))
             {
                 <li>
                     <div class="icon">

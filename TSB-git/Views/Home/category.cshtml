@@ -85,7 +85,7 @@
                 </div>
                 <div class="col-xs-12 col-md-2 p-0">
                     <ul>
-                        @foreach (var category in Model.CategoryHome.Where(x => x.ParentId == null).Skip(1).Take(1))
+                        @foreach (var category in Model.CategoryHome.Where(x => x.ParentId == null).Skip(4).Take(1))
                         {
                             <li class="action">@category.Name</li>
                             foreach (var childs in Model.CategoryHome.Where(x => x.ParentId == category.Id))
