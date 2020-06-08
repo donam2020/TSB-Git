@@ -16,7 +16,7 @@
             prevArrow: ".arrow-left",
             nextArrow: ".arrow-right",
             responsive: [
-               
+
 
                 {
                     breakpoint: 480,
@@ -30,7 +30,9 @@
         });
 
     </script>
-    <script>
+
+
+    @*<script>
         $('.slider-customer').slick({
             autoplaySpeed: true,
             autoplay: true,
@@ -50,7 +52,8 @@
 
             ]
         });
-    </script>
+    </script>*@
+
 
     <script>
         $('.slider-coment').slick({
@@ -101,7 +104,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-6 introl-left">
-                @foreach (var item in Model.Articles.Where(x => x.Category.TypeShow == TSB.Entites.TyShow.Category).Take(1))
+                @foreach (var item in Model.Articles.Where(x => x.Category.TypeShow == TSB.Entites.TyShow.Article).Skip(1).Take(1))
                 {
                     <div class="title">
                         <span>@item.Title</span>
@@ -112,21 +115,21 @@
                             @Html.Raw(item.Content)
                         </span>
                         <div class="ad">
-                                <ul>
-                                    <li>
-                                        <div id="transaction-count" class="number"></div>
-                                        <label>Kinh nghiệm</label>
-                                    </li>
-                                    <li>
-                                        <div id="customer-count" class="number"></div>
-                                        <label>Nhân viên</label>
-                                    </li>
-                                    <li>
-                                        <div id="city-count" class="number"></div>
-                                        <label>Chi nhánh toàn cầu</label>
-                                    </li>
-                                </ul>
-                            </div>
+                            <ul>
+                                <li>
+                                    <div id="transaction-count" class="number"></div>
+                                    <label>Kinh nghiệm</label>
+                                </li>
+                                <li>
+                                    <div id="customer-count" class="number"></div>
+                                    <label>Nhân viên</label>
+                                </li>
+                                <li>
+                                    <div id="city-count" class="number"></div>
+                                    <label>Chi nhánh toàn cầu</label>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 }
 
@@ -184,7 +187,6 @@
                         <img src="@baner.Image" alt="" />
                     </div>
                 }
-
             </div>
             <div class="col-sm-12 col-md-6 introl-left">
                 @foreach (var item in Model.Articles.Where(x => x.Category.TypeShow == TSB.Entites.TyShow.Article).Take(1))
@@ -199,10 +201,6 @@
                         </span>
                         <ul>
                             <li> <span>@Html.Raw(item.Content)</span></li>
-                            @*<li> <span>- Giải pháp điều khiển giám sát quản lí nhà máy SCADA</span></li>
-                                <li> <span>- Giải pháp nâng cao chất lượng sản xuất </span></li>*@
-
-
                         </ul>
                     </div>
                 }
@@ -273,7 +271,7 @@
             <span>Đối tác của chúng tôi</span>
             <h2>Đối tác tiêu biểu</h2>
         </div>
-        <div class="slider-customer">
+        <div class="slider slider-comment">
             @foreach (var baner in Model.Baners.Where(x => x.Positon == TSB.Entites.GruopBaner.Partner))
             {
                 <a href=""><img src="@baner.Image" alt="Alternate Text" /></a>
@@ -316,29 +314,7 @@
                             </div>
                         </div>
                     </div>
-                }
-                @*<div class="">
-                        <div class="avatar">
-                            <i class="fal fa-quote-left icon-left"></i>
-                            <img src="~/Content/img/icon/7.png" alt="" />
-                            <i class="fal fa-quote-right icon-right"></i>
-                        </div>
-                        <div class="sumary">
-                            <span>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </span>
-                        </div>
-                        <div class="info">
-                            <div class="name">
-                                James Shane Well
-                            </div>
-                            <div class="addres">
-                                California, USA
-                            </div>
-                        </div>
-                    </div>*@
+                }              
             </div>
         </div>
         <div class="quotes">
